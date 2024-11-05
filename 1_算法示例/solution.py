@@ -2,6 +2,7 @@
 
 import numpy as np
 from scipy.linalg import eigh
+from sklearn.cluster import KMeans
 
 # 设置numpy全局打印选项
 np.set_printoptions(precision=2, suppress=True)
@@ -98,8 +99,6 @@ print(eigenvalues[ :k]) # [-2.22044605e-16  2.47658240e-02]
 Y = np.array(H)
 print("数据集Y：\n", Y)
 print(Y.shape)
-
-from sklearn.cluster import KMeans
 
 # 初始簇心
 centroids = Y[:2]
